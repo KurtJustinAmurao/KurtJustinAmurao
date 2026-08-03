@@ -3,7 +3,7 @@ This website includes DOST-SEI & DOST MIMAROPA news, and events. With added feat
 Moreover, a dedicated community page that provides users access or links to communities of DOST MIMAROPA such as Discord and Facebook community.
 The following will be the initial structure of the website:
 
-LANDING PAGE
+**LANDING PAGE**
 
 Header
 - Logo
@@ -23,7 +23,7 @@ Footer
 
 
 
-LOG IN PAGE
+**LOG IN PAGE**
 
 Header
 - Logo
@@ -43,7 +43,7 @@ Footer
 
 
 
-REGISTRATION PAGE
+**REGISTRATION PAGE**
 
 Header
 - Logo
@@ -63,7 +63,7 @@ Footer
 
 
 
-HOMEPAGE
+**HOMEPAGE**
 
 Header
 - Logo
