@@ -67,5 +67,10 @@ button:active{
 }
 
 img{
-    padding: 5px;
+    
+    width: 100px;
+    height: 100px;
+    border: solid 1px white;
+    border-radius: 30px;
 }
+
