@@ -1,7 +1,9 @@
 html, body{
     padding: 0%;
     margin: 0%;
-    
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .header{
@@ -9,7 +11,14 @@ html, body{
     height: fit-content;
     background-image: linear-gradient(to right, #10316B, #0B409C);
     padding: 10px;
+    margin: 0;
+}
 
+.page-img{
+    border-radius: 50%;
+    
+    height: 200px;
+    width: 200px;
 }
 
 .white{
@@ -22,9 +31,38 @@ html, body{
 .black{
     font-family: Arial, Helvetica, sans-serif;
     color: black;
-    margin: 0;
-    
-    
+    margin: 0;  
+}
+
+h2.black {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    font-size: 270%;
+    margin: 10px;  
+}
+
+h2.white {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 270%;
+    margin: 10px;  
+    text-shadow: 4px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+h2.blue {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #10316B;
+    font-size: 270%;
+    margin: 10px;  
+    text-shadow: 4px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+h1.white {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 270%;
+    margin: 10px;  
+    text-shadow: 4px 2px 0px rgba(0, 0, 0, 0.2);
 }
 
 .body{
@@ -35,12 +73,18 @@ html, body{
 }
 
 .bodystack{
+    margin: 0;
+    padding: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
     width: 100%;
     min-height: 100vh;
-    background-color: white;
+    background-image: url('Images/Big_lagoon_entrance\,_Miniloc_island_-_panoramio.jpg'); 
+    background-repeat: no-repeat;             
+    background-size:101%;             
+    background-position: center;
+                
 }
 
 .flexbox{
@@ -69,15 +113,18 @@ input{
     margin: 10px;
 }
 
-button{
-    border: 1px solid black;
+
+
+button {
+    border: 0px solid white;
     background-color: white;
     border-radius: 100px;
     padding: 10px;
     margin: 10px;
+    box-shadow: 3px 10px 1px rgba(0, 0, 0, 0);
 }
 
-button:hover{
+button:hover{   
     background-color: lightblue;
 }
 button:active{
@@ -95,4 +142,15 @@ img{
 .curve_box{
     box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.3);
     
+}
+
+.rock-bg {
+    margin: 0;
+    padding: 0; 
+    background-image: url('Images/Big_lagoon_entrance\,_Miniloc_island_-_panoramio.jpg'); 
+    background-repeat: no-repeat;             
+    background-size: cover;             
+    background-position: center;            
+    background-attachment: fixed; 
+  
 }
