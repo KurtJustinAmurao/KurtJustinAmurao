@@ -55,7 +55,8 @@ html, body{
 .black{
     font-family: Arial, Helvetica, sans-serif;
     color: black;
-    margin: 0;  
+    margin: 0;
+    font-size: 1vw;  
 }
 
 .white_txt {
@@ -68,18 +69,18 @@ html, body{
 
 .temp {
     box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.3);
-    
+    background-color: rgba(255 ,255, 255, 0.3);
+    border-radius: 15px;
     margin: 10px;
     padding: 10px;
     max-width: 50vw;
     min-height: 100px;
-    border: 3px solid black;
     align-items: center;
 }
 
 .flex_logo{
-    min-width: 150px;
-    min-height: 150px;
+    width: 15vw;
+    height: 15vw;
     border-radius: 50%; 
 }
 
@@ -87,14 +88,13 @@ html, body{
     border: 0px solid white;
     background-color: white;
     border-radius: 100px;
-    padding: 15px 50px;
+    padding: 1vw 1vw;
     margin: 10px;
     box-shadow: 3px 10px 1px rgba(0, 0, 0, 0);
 }
 
 .flexbox{
     display: flex;
-    border: 2px solid green;
     margin: 0;
     padding: 0;
     gap: 0;
@@ -156,5 +156,13 @@ img{
         display: flex;
         flex-direction: column;
         gap: 0;
+    }
+
+    .white_txt {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 3vw;
+    margin: 10px;  
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
     }
 }
