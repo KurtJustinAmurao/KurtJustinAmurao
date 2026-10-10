@@ -1,3 +1,5 @@
+/*=== GENERAL ===*/
+
 html, body{
     padding: 0%;
     margin: 0%;
@@ -8,6 +10,9 @@ html, body{
     overflow-x: hidden;
 }
 
+
+/*=== HEADER ===*/
+
 .header{
     width: 100;
     height: fit-content;
@@ -16,18 +21,9 @@ html, body{
     margin: 0;
 }
 
-.page-img{
-    border-radius: 50%;
-    max-height: 100%;
-    max-width: 100%;
-}
+/*=== MAIN BACKGROUND ===*/
 
-.body{
-    width: 100%;
-    min-height: 100vh;
-    background-color: white;
-    
-}
+
 .background{
     margin: 0;
     padding: 0;
@@ -40,58 +36,33 @@ html, body{
      
 }
 
-
+/*=== MAIN CONTENT LAYOUT ===*/
 
 .bodystack{
     margin: 0;
     padding: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: 0;
     width: 100%;
     min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
 }
 
-.black{
-    font-family: Arial, Helvetica, sans-serif;
-    color: black;
-    margin: 0;
-    font-size: 1vw;  
-}
-
-.white_txt {
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
-    font-size: 3vw;
-    margin: 10px;  
-    text-shadow: 4px 2px 0px rgba(0, 0, 0, 0.2);
-}
+/*=== CONTENT CARDS ===*/
 
 .temp {
-    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.3);
-    background-color: rgba(255 ,255, 255, 0.3);
-    border-radius: 15px;
+    
+
     margin: 10px;
-    padding: 10px;
-    max-width: 50vw;
+    padding: 20px;
+    max-width: 50%;
     min-height: 100px;
+
     align-items: center;
 }
 
-.flex_logo{
-    width: 15vw;
-    height: 15vw;
-    border-radius: 50%; 
-}
-
-.white_button {
-    border: 0px solid white;
-    background-color: white;
-    border-radius: 100px;
-    padding: 1vw 1vw;
-    margin: 10px;
-    box-shadow: 3px 10px 1px rgba(0, 0, 0, 0);
-}
+/*=== FLEXBOXES ===*/
 
 .flexbox{
     display: flex;
@@ -115,6 +86,73 @@ html, body{
     text-decoration: none;
 }
 
+/*=== TEXTS ===*/
+
+.black{
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    margin: 0;
+    font-size: clamp(10px, 2vw, 24px);  
+}
+
+.white_txt_logo {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: clamp(25px, 3vw, 100px);
+    text-shadow: 0 0 8px black, 0 0 15px black;
+}
+
+.white_txt {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: clamp(16px, 3vw, 32px);
+    text-shadow: 4px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+/*=== LOGOS AND IMGS ==*/
+img{
+    
+    width: 4vw;
+    height: 4vw;
+    border: solid 1px white;
+    border-radius: 30px;
+}
+
+.page-img{
+    border-radius: 50%;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.body{
+    width: 100%;
+    min-height: 100vh;
+    background-color: white;
+    
+}
+
+
+.flex_logo{
+    width: clamp(120px, 5vw, 200px);
+    height: clamp(120px, 5vw, 200px);
+    border-radius: 50%; 
+}
+
+
+/*=== BUTTONS ===*/
+
+.white_button {
+    border: clamp(1px, 2vw, 5px) solid white;
+    background-color: white;
+    border-radius: 100px;
+    padding: 1vw 1vw;
+    margin: 10px;
+    box-shadow: 3px 10px 1px rgba(0, 0, 0, 0);
+}
+
+
+/*=== INPUTS ===*/
+
 input{
     border: 1px solid black;
     border-radius: 100px;
@@ -123,18 +161,20 @@ input{
     margin: 10px;
 }
 
-img{
-    
-    width: 50px;
-    height: 50px;
-    border: solid 1px white;
-    border-radius: 30px;
+/*== DESIGNS ==*/
+.vertical_line{
+    width: 2px;
+    height: 100%;
+    background-color: white;
 }
+
+
 
 .curve_box{
     
 }
 
+/* === TABLETS - LAPTOP S === */
 @media screen and (max-width: 1000px) {
     .background{
         margin: 0;
@@ -158,11 +198,84 @@ img{
         gap: 0;
     }
 
+    .white_txt_logo {
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        font-size: clamp(30px, 3vw, 36px);
+        text-shadow: 0 0 8px black, 0 0 15px black;
+    }   
+
     .white_txt {
     font-family: Arial, Helvetica, sans-serif;
     color: white;
-    font-size: 3vw;
-    margin: 10px;  
+    font-size: clamp(16px, 3vw, 24px);
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    .temp {
+    
+
+    margin: 10px;
+    padding: 20px;
+    max-width: 70%;
+    min-height: 100px;
+
+    align-items: center;
+}
+}
+
+/* ===== MOBILE PHONES ===== */
+@media screen and (max-width: 480px) {
+    .background{
+        margin: 0;
+        padding: 0;
+        gap: 10px;
+        background-image: url('Images/BG-Portrait.jpg'); 
+        background-repeat: no-repeat;             
+        background-size: cover;              
+        background-position: center;
+        } 
+        
+    .bodystack {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        min-height: 100vh;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .white_txt_logo {
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        font-size: clamp(18px, 3vw, 24px);
+        text-shadow: 0 0 8px black, 0 0 15px black;
+    }   
+
+    .white_txt {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: clamp(16px, 3vw, 24px);
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    .temp {
+    
+
+    margin: 10px;
+    padding: 20px;
+    max-width: 90%;
+    min-height: 100px;
+
+    align-items: center;
+    }
+
+    .flex_logo{
+    width: clamp(80px, 5vw, 120px);
+    height: clamp(80px, 5vw, 120px);
+    border-radius: 50%; 
     }
 }
