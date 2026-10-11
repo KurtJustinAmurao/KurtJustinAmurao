@@ -21,6 +21,61 @@ html, body{
     margin: 0;
 }
 
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-image: linear-gradient(to right, #10316B, #0B409C);
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.navbox{
+    display:flex; 
+    align-items: center; 
+    justify-content: space-between;
+}
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    background: #0B409C;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 1001;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background:  #10316B;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
 /*=== MAIN BACKGROUND ===*/
 
 
@@ -49,6 +104,56 @@ html, body{
     display: flex;
 }
 
+.newsbox{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.news{
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 2px rgba(0,0,0,0.3);
+}
+
+.news h2{
+    margin-top: 0;
+    color: #234b35;
+}
+
+.date {
+    color: gray;
+    font-size: 14px;
+}
+
+.news a {
+    color: #234b35;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.news a:hover {
+    text-decoration: underline;
+}
+
+.calendar{
+    width: 80%;
+    max-width: 800px;
+    height: 450px;
+    border: none;
+    display: block;
+    margin: 0 auto;
+}
+
+.profile_box{
+    margin: 0;
+    display: flex; 
+    align-items: center;
+}
 /*=== CONTENT CARDS ===*/
 
 .temp {
@@ -56,7 +161,7 @@ html, body{
 
     margin: 10px;
     padding: 20px;
-    max-width: 50%;
+    max-width: 60%;
     min-height: 100px;
 
     align-items: center;
@@ -64,7 +169,7 @@ html, body{
 
 .white_box{
     margin: 10px;
-    padding: 10px;
+    padding: 20px;
     min-width: 120px;
     min-height: 100px;
     align-items: center;
@@ -106,11 +211,23 @@ html, body{
 
 /*=== TEXTS ===*/
 
+.head_txt{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: Black;
+    font-size: clamp(25px, 3vw, 100px);
+}
+
 .black{
     font-family: Arial, Helvetica, sans-serif;
     color: black;
     margin: 0;
-    font-size: clamp(10px, 2vw, 24px);  
+    font-size: clamp(8px, 1vw, 24px);  
+}
+
+.card_header{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    font-size: clamp(8px, 1.5vw, 24px); 
 }
 
 .white_txt_logo {
@@ -134,13 +251,15 @@ html, body{
     text-shadow: 4px 2px 0px rgba(0, 0, 0, 0.2);
     margin: 0;
 }
+
+.no_margin{
+    margin: 0;
+}
+
 /*=== LOGOS AND IMGS ==*/
-img{
-    
-    width: 4vw;
-    height: 4vw;
-    border: solid 1px white;
-    border-radius: 30px;
+.news_img{
+    height: auto;
+    width: 100%;
 }
 
 .page-img{
@@ -179,7 +298,7 @@ img{
     box-shadow: none;
     background-color: white;
     border-radius: 100px;
-    padding: clamp(10px, 1vw, 15px) clamp(20px, 1vw, 30px);
+    padding: clamp(5px, 1vw, 15px) clamp(10px, 1vw, 30px);
     margin: 10px;   
     font-size: clamp(12px, 1vw, 32px);
 }
@@ -203,7 +322,7 @@ input{
 }
 
 /* === TABLETS - LAPTOP S === */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1050px) {
     .background{
         margin: 0;
         padding: 0;
@@ -229,8 +348,7 @@ input{
     .white_box{
     margin: 10px;
     padding: 20px;
-    min-width: 100px;
-    min-height: clamp(100px, 2vw, 200px);
+    height: 100%;
     align-items: center;
     background-color: rgba(255, 255, 255, 1.0);
     border-radius: 50px;
@@ -247,7 +365,7 @@ input{
     .white_txt {
     font-family: Arial, Helvetica, sans-serif;
     color: white;
-    font-size: clamp(16px, 2vw, 32px);
+    font-size: clamp(24px, 2vw, 32px);
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
     }
     
@@ -255,13 +373,31 @@ input{
     font-family: Arial, Helvetica, sans-serif;
     color: black;
     margin: 0;
-    font-size: clamp(10px, 4vw, 24px);  
+    font-size: clamp(10px, 3vw, 24px);  
 }
+
+    .card_header{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    font-size: clamp(32px, 3vw, 100px); 
+}
+
+.white_button {
+    border: solid 1px black;
+    outline: none;
+    box-shadow: none;
+    background-color: white;
+    border-radius: 100px;
+    padding: clamp(20px, 1vw, 15px) clamp(30px, 1vw, 30px);
+    margin: 10px;   
+    font-size: clamp(24px, 1vw, 32px);
+}   
 
     .temp {
     margin: 10px;
     padding: 20px;
-    max-width: 70%;
+    
+    min-width: 80%;
     min-height: 100px;
     align-items: center;
     }
@@ -278,6 +414,11 @@ input{
     text-align: justify; 
     padding: 10px; 
     margin: 10px 25px;
+}
+
+    .navbox{
+    display:flex;
+    flex-direction: column; 
 }
 
     
@@ -325,8 +466,25 @@ input{
     font-family: Arial, Helvetica, sans-serif;
     color: black;
     margin: 0;
-    font-size: clamp(18px, 2vw, 24px);  
+    font-size: clamp(12px, 2vw, 36px);  
 }
+
+    .card_header{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    font-size: clamp(24px, 3vw, 100px); 
+}
+
+.white_button {
+    border: solid 1px black;
+    outline: none;
+    box-shadow: none;
+    background-color: white;
+    border-radius: 100px;
+    padding: clamp(10px, 1vw, 15px) clamp(10px, 1vw, 30px);
+    margin: 10px;   
+    font-size: clamp(12px, 1vw, 32px);
+}   
 
     .temp {
     
@@ -361,4 +519,12 @@ input{
     padding: 0;
     gap: 0;
     }
+
+    .paragraph{
+    font-size: clamp(20px, 1vw, 100px); 
+    color: black; 
+    text-align: justify; 
+    padding: 10px; 
+    margin: 10px 1px;
+}
 }
